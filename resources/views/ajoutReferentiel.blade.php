@@ -3,7 +3,10 @@
     
     <form action="enregistrerReferentiel" method="POST" class="container my-5">
     {{csrf_field()}}
-    
+    <div class="mb-3">
+      <label for="type" class="form-label">Type</label>
+      <input type="text" class="form-control" name="type" id="type">
+    </div>
         <div class="md-6">
             <label for="libelle" class="form-label">Libelle</label>
             <input type="text" class="form-control" id="libelle" name="libelle" placeholder="libellé">

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\referentiel;
+use App\Models\type;
 class ReferentielController extends Controller
 {
     //
@@ -17,11 +18,16 @@ class ReferentielController extends Controller
             'horaire' => 'required',
             
         ]);
+        $type = new type;
         $referentiel = new referentiel;
+       
         $referentiel->libelle = request('libelle');
         $referentiel->validite = request('validite');
         $referentiel->horaire = request('horaire');
         $referentiel->save();
+        $type->libelle = request('type');
+        $type->referentiel_id = $referentiel->id;
+        $type->save();
         return redirect('listeReferentiel');
     }
     public function liste(){
