@@ -60,6 +60,7 @@ class ReferentielController extends Controller
     }
     public function info($id){
         $referentiel = referentiel::findOrFail($id);
+       
         return view('detailReferentiel', compact('referentiel'));
     }
 }

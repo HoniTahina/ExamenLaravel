@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class formation_referentiel extends Model
 {
     use HasFactory;
+
+    
 }

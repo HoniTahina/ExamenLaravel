@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('description');
             $table->boolean('isStarted');
             $table->date('dateDebut');
-            $table->foreignId('referentiel_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }

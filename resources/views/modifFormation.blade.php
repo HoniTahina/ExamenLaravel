@@ -7,14 +7,7 @@
         <label for="nom" class="form-label">Nom</label>
         <input type="text" class="form-control" id="nom" name="nom" value="{{$formation->nom}}">
       </div>
-      <div class="mb-3">
-        <label for="referentiel" class="form-label">Referentiel</label>
-        <select id="referentiel" name="referentiel" class="form-control">
-          @foreach ($referentiel as $r)
-               <option value="{{$r->id}}">{{$r->libelle}}</option>
-          @endforeach
-          </select>
-        </div>
+      
       <div class="mb-3">
         <label for="duree" class="form-label">Durée</label>
         <input type="number" class="form-control" name="duree" id="duree" value="{{$formation->duree}}">

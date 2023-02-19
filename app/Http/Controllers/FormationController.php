@@ -25,11 +25,11 @@ class FormationController extends Controller
         $formation = new formation;
         $formation->nom = request('nom');
         $formation->duree = request('duree');
-        $formation->referentiel_id = request('referentiel');
+       
         $formation->description = request('description');
         $formation->isStarted = request('isStarted');
         $formation->dateDebut = request('dateDebut');
-        $formation->referentiel_id = request('referentiel');
+        
         $formation->save();
         return redirect('listeFormation');
     }
@@ -77,6 +77,7 @@ class FormationController extends Controller
             $f->referentiel_id = request('referentiel');;
             $f->save();
             return redirect('plusReferentiel/'. $id);
+
         }
     //
 }

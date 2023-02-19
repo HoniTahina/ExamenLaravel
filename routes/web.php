@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CandidatController;
 use App\Http\Controllers\FormationController;
 use App\Http\Controllers\ReferentielController;
+use App\Http\Controllers\DashboardController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,7 +17,7 @@ use App\Http\Controllers\ReferentielController;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('info');
 });
 Route::get('/ajoutCandidat', [CandidatController::class, 'ajout']);
 Route::get('/ajoutFormation', [FormationController::class, 'ajout']);
@@ -49,4 +50,4 @@ Route::get('/info/{id}', [ReferentielController::class, 'info']);
 Route::get('/plusReferentiel/{id}', [FormationController::class, 'detail']);
 Route::post('/plusReferentiel/ajoutR/{id}', [FormationController::class, 'ajoutReferentiel']);
 
-Route::get('/dashboarde', [DashbordController::class, 'go']);
+Route::get('/dashboard', [DashboardController::class, 'go']);

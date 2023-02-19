@@ -1,17 +1,11 @@
 @include('home')
-<h2>Formations ({{$referentiel->type->libelle}})</h2>
-<form action="enregistrerType" method="post">
-    <div class="mb-3">
-        <label for="referentiel" class="form-label">Type</label>
-        <select id="referentiel" name="referentiel" class="form-control">
-          @foreach ($referentiel->type as $r)
-               <option value="{{$r->id}}">{{$r->libelle}}</option>
-          @endforeach
-          </select>
-      </div>
-</form>
+<div class="ml-5" style="color:antiquewhite" >
+<h1>Referentiel : {{$referentiel->libelle}} </h1>
+<h2>Type: {{$referentiel->type->libelle}}</h2>
+<h2><u>Les formations </u></h2>
 <ul>
     @foreach ($referentiel->formation as $f)
-        <li>{{$referentiel->formation->nom}}</li>
+        <li>{{$f->nom}}</li>
     @endforeach
 </ul>
+</div>

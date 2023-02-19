@@ -10,51 +10,51 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <title>Examen</title>
   </head>
-  <body style="background-color: rgb(162, 234, 237)">
+  <body style="background-color: rgb(78, 109, 110)">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light"  >
-        <a class="navbar-brand" href="#">Examen</a>
+    <nav  class="navbar navbar-expand-lg navbar-light bg-dark"   >
+        <a class="navbar-brand" href="#"style="color:antiquewhite">Examen</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div  class="collapse navbar-collapse" id="navbarSupportedContent" >
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="{{url('/')}}">Home <span class="sr-only">(current)</span></a>
+                    <a style="color:antiquewhite" class="nav-link" href="{{url('/')}}">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{url('dashbord')}}">dashbord</a>
+              <a style="color:antiquewhite" class="nav-link" href="{{url('dashboard')}}">dashbord</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a style="color:antiquewhite" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Candidats
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="{{url('ajoutCandidat')}}">Ajouter</a>
-                    <a class="dropdown-item" href="{{url('listeCandidat')}}">Liste</a>
+                <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                    <a style="color:rgb(67, 135, 161)" class="dropdown-item" href="{{url('ajoutCandidat')}}">Ajouter</a>
+                    <a style="color:rgb(67, 135, 161)" class="dropdown-item" href="{{url('listeCandidat')}}">Liste</a>
                 
                 </div>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <li class="nav-item dropdown ">
+              <a style="color:antiquewhite" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Referentiel
               </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="{{url('ajoutReferentiel')}}">Ajouter</a>
-                  <a class="dropdown-item" href="{{url('listeReferentiel')}}">Liste</a>
+              <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                  <a style="color:rgb(67, 135, 161)" class="dropdown-item" href="{{url('ajoutReferentiel')}}">Ajouter</a>
+                  <a style="color:rgb(67, 135, 161)" class="dropdown-item" href="{{url('listeReferentiel')}}">Liste</a>
               
               </div>
           </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a style="color:antiquewhite" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Formations
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="{{url('ajoutFormation')}}">Ajouter</a>
-                    <a class="dropdown-item" href="{{url('listeFormation')}}">Liste</a>
+                <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                    <a style="color:rgb(67, 135, 161)" class="dropdown-item" href="{{url('ajoutFormation')}}">Ajouter</a>
+                    <a style="color:rgb(67, 135, 161)" class="dropdown-item" href="{{url('listeFormation')}}">Liste</a>
                 
                 </div>
             </li>

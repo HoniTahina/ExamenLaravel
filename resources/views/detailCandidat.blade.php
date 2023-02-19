@@ -21,9 +21,9 @@
             <div class="d-flex align-items-center justify-content-between px-4">
                 <div class="d-flex align-items-center">
                     <div class="ms-4">
-                        <div class="text-xs text-muted">{{$f->nom}}</div>
-                        <div class="text-xs text-muted">{{$f->dateDebut}}</div>
-                    </div>
+                        <div class="text-xs text-muted">Formation : {{$f->nom}}</div>
+                        <div class="text-xs text-muted">Date : {{$f->dateDebut}}</div>
+                      </div>
                 </div>
             
             </div>
