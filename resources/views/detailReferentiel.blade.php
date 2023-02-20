@@ -8,4 +8,5 @@
         <li>{{$f->nom}}</li>
     @endforeach
 </ul>
+<a href="/listeReferentiel" class="btn btn-danger">Retour</a>
 </div>

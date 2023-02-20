@@ -13,6 +13,7 @@
                 
               </select>
             <button class="btn btn-sm btn-primary" type="submit">Ajouter</button>
+            <a href="/listeFormation" class="btn btn-danger">Retour</a>
         </form>
     </div>
     <div class="card-body px-0">

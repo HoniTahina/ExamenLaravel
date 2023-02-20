@@ -31,40 +31,10 @@ class DashboardController extends Controller
             }
            
             $referentiel = referentiel::all();
-            $ref =[];
-            $formCount = [];
-            foreach($referentiel as $r){
-                $ref[]= $r->libelle;
-                foreach($r->formation as $f =>$val){
-                $formCount[]=1;
-            }}
-            $formation = formation::all();
-            $form =[];
-            $candCount = [];
-            foreach($formation as $f){
-                $form[]= $f->nom;
-                $f1 = $f->candidat;
-                $fo = function($f1){
-                    $x = $f1::select('id')->get();
-                    return $x;
-                };
-                foreach($fo as $f =>$val){
-                    $candCount[]=count($val);
-                }
-            }
-            $type = type::all();
-            $types =[];
-            $formCount2 =[];
-            foreach($type as $t){
-                $types []= $t->libelle;
-                foreach($t->referentiel->formation as $f){
-                    $fo = $f::select('id')->get();
-                    $formCount2 []= count($fo);
-                }
-                
-            }
+            $formation = formation::all();  
+
         return view ('dashboard', compact('ageData','ages', 'ageCount',
-        'sexeData', 'sexes', 'sexeCount','ref', 'formCount','form', 'candCount', 'types',
-         'formCount2'));
+        'sexeData', 'sexes', 'sexeCount','formation',
+         'referentiel'));
     }
 }

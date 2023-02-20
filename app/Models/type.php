@@ -8,7 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class type extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'id',
+        'libelle',      
+    ];
     public function referentiel(){
+        
         return $this->belongsTo(referentiel::class);
     }
 }

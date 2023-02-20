@@ -20,7 +20,22 @@
     <div class="card border-danger mb-3 h-100" >
     <div class="card-header" style="color: #DC3545">Nombre de formation par ref</div>
     <div class="card-body text-primary"  style="background-color: rgb(255, 233, 233)">
-      <canvas id="nbrForm" class="chart"></canvas>
+      <table class="table table-light table-striped">
+        <thead>
+          <tr>
+            <th>Referentiels</th>
+           <th>Nombre de formations </th>
+          </tr>
+        </thead>
+        <tbody>
+          @foreach ($referentiel as $ref)
+            <tr>  
+                  <td>{{$ref->libelle}}</td>
+                  <td>{{count($ref->formation)}}</td>
+            </tr>
+          @endforeach
+        </tbody>
+      </table>
     </div>
   </div> 
 </div>
@@ -28,7 +43,22 @@
   <div class="card border-info mb-3 h-100" >
   <div class="card-header" style="color: #17A2B8">Nombre de candidat par formation</div>
   <div class="card-body text-primary"  style="background-color: rgb(228, 224, 255)">
-    <canvas id="nbrCand" class="chart"></canvas>
+    <table class="table table-light table-striped">
+      <thead>
+        <tr>
+          <th>Formations</th>
+         <th>Nombre de candidats </th>
+        </tr>
+      </thead>
+      <tbody>
+        @foreach ($formation as $f)
+          <tr>  
+                <td>{{$f->nom}}</td>
+                <td>{{count($f->candidat)}}</td>
+          </tr>
+        @endforeach
+      </tbody>
+    </table>
   </div>
 </div> 
 </div>
@@ -37,7 +67,29 @@
         <div class="card border-secondary mb-3 h-100" >
         <div class="card-header" style="color: #6C757D">Repartition des formations par type</div>
         <div class="card-body text-secondary"  style="background-color: rgb(222, 222, 222)">
-          <canvas id="repType" class="chart"></canvas>
+         
+          <table  class="table table-light table-striped">
+            <thead>
+              <tr>
+                <th>Types</th>
+                <th>Nombre de formations</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+              @foreach ($referentiel as $ref)
+           
+                  <tr>
+                    <td>{{$ref->type->libelle}}</td>
+
+                    <td>
+                      <ul><li>{{count($ref->formation) }}</li></ul>
+                    </td>
+                  </tr>
+              
+                  @endforeach
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
@@ -47,17 +99,8 @@
       var _xAgeData=JSON.parse('{!! json_encode($ageCount) !!}');
       var _ySexeData=JSON.parse('{!! json_encode($sexes) !!}');
       var _xSexeData=JSON.parse('{!! json_encode($sexeCount) !!}');
-      var _yRefData=JSON.parse('{!! json_encode($ref) !!}');
-      var _xRefData=JSON.parse('{!! json_encode($formCount) !!}');
-      var _yCandData=JSON.parse('{!! json_encode($form) !!}');
-      var _xCandData=JSON.parse('{!! json_encode($candCount) !!}');
-      var _yTypeData=JSON.parse('{!! json_encode($types) !!}');
-      var _xTypeData=JSON.parse('{!! json_encode($formCount2) !!}');
     
     </script>
     <script src="{{asset('age.js')}}"></script>
     <script src="{{asset('sexe.js')}}"></script>
-    <script src="{{asset('formRef.js')}}"></script>
-    <script src="{{asset('candForm.js')}}"></script>
-    <script src="{{asset('formType.js')}}"></script>
 </div>
